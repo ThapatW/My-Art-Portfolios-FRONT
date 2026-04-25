@@ -10,15 +10,15 @@ const cards = [
   { id: 2, title: 'Youtube Banner', 
   price: '500.-', 
   description: 'Start with 1 character\n + 180.- for extra character in the banner\n\n [ You will get ]\n - Ready-to-use banner sized image\n - Typography in the banner (+ 50.-)', 
-  placement: 'Right', imgSrc: new URL('@/assets/pics/lootbox.png', import.meta.url).href },
+  placement: 'Right', imgSrc: new URL('@/assets/pics/banners.png', import.meta.url).href },
   { id: 3, title: 'Items', 
   price: '300.-', 
-  description: 'The price is per 1 item\n The final price is negotiable if you order more than 3 items\n\n [ You will get ]\n - .png transparent image', 
-  placement: 'Left', imgSrc: new URL('@/assets/pics/lootbox.png', import.meta.url).href },
-  { id: 4, title: 'Emoji', 
-  price: '250.-/1', 
-  description: 'Set 6 - 1200.-\n Set 12 - 2200.-\n Set 24 - 4000.-\n Set 32 - 5000.-\n\n [ You will get ]\n - .png transparent image\n - happiness guaranteed :D', 
-  placement: 'Right', imgSrc: new URL('@/assets/pics/lootbox.png', import.meta.url).href },
+  description: 'The price is per 1 item\n The final price is negotiable if you order more than 3 items\n **Loot box + Key paired at 450.-**\n\n [ You will get ]\n - .png transparent image', 
+  placement: 'Left', imgSrc: new URL('@/assets/pics/items.png', import.meta.url).href },
+  { id: 4, title: 'Youtube Bundle', 
+  price: '600.-', 
+  description: 'Banner and Profile can be different posture BUT same character\n + 180.- for extra character in the banner\n\n [ You will get ]\n - .png transparent profile\n - Profile with gray bg\n - Ready-to-use banner sized image\n - Typography in the banner (+ 50.-)', 
+  placement: 'Right', imgSrc: new URL('@/assets/pics/ytbundles.png', import.meta.url).href },
 ]
 
 const current = ref(0)
@@ -35,7 +35,7 @@ const next = () => {
 <template>
   <div class="relative flex items-center justify-center gap-4">
     <!-- Left button -->
-    <img @click="prev" src="@/assets/pics/leftarrow.png" alt="Left Arrow" class="w-[3vw] mr-[3vw]">
+    <img @click="prev" src="@/assets/pics/leftarrow.png" alt="Left Arrow" class="w-[20px] ml-3 md:w-[3vw] md:mr-[3vw]">
 
     <!-- Card display -->
     <div class="overflow-hidden w-full">
@@ -54,7 +54,7 @@ const next = () => {
     </div>
 
     <!-- Right button -->
-    <img @click="next" src="@/assets/pics/rightarrow.png" alt="Right Arrow" class="w-[3vw] ml-[3vw]">
+    <img @click="next" src="@/assets/pics/rightarrow.png" alt="Right Arrow" class="w-[20px] mr-3 md:w-[3vw] md:ml-[3vw]">
   </div>
 
   <!-- Dots -->

@@ -8,7 +8,7 @@ const bgImage = new URL('@/assets/pics/background.jpg', import.meta.url).href
   <div class="bg-cover bg-center bg-no-repeat backdrop-blur-sm min-h-screen w-full"
     :style="{ backgroundImage: `url(${bgImage})` }">
     <div class="sticky top-0 z-10 bg-black/40 backdrop-blur-md shadow-md">
-      <nav class="flex justify-between px-[10vw]">
+      <nav class="flex justify-between pl-4 md:px-[10vw]">
         <div class="flex items-center">
           <RouterLink to="/">
             <img src="@/assets/pics/logo.png" alt="Logo" class="h-[35px] md:h-[55px] inline-block mr-2" />
@@ -42,12 +42,8 @@ const bgImage = new URL('@/assets/pics/background.jpg', import.meta.url).href
       </nav>
     </div>
     <div class="min-h-[calc(100vh-60px)] md:min-h-[calc(100vh-92px)] bg-black/50 backdrop-blur-md">
-      <div class="px-[10vw] py-[7vh]">
-        <RouterView v-slot="{ Component }">
-          <Transition name="fade">
-            <component :is="Component" />
-          </Transition>
-        </RouterView>
+      <div class="md:px-[10vw] md:py-[7vh]">
+        <RouterView />
       </div>
     </div>
   </div>
