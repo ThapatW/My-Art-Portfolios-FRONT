@@ -12,8 +12,8 @@ const game2Img = new URL('@/assets/pics/mascot.png', import.meta.url).href
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 mt-[10vh] px-12 md:px-0">
     <MinigameCard
-      title="Game 1"
-      links="/minigame/game1"
+      title="Simon Says"
+      links="/minigame/simonsay"
       :imgSrc="game1Img"
     />
     <MinigameCard
