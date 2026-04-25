@@ -21,14 +21,9 @@ const bgImage = new URL('@/assets/pics/background.jpg', import.meta.url).href
             :class="{ 'neon-gradient-border': route.path === '/commission' }">
             Commission
           </RouterLink>
-          <RouterLink to="/gallery"
-            class="flex items-center text-lg font-semibold text-white py-8 px-7 tracking-wider hover:neon-text-blue"
-            :class="{ 'neon-gradient-border': route.path === '/gallery' }">
-            Gallery
-          </RouterLink>
-          <RouterLink to="/mini"
+          <RouterLink to="/minigame"
             class="flex items-center text-lg font-semibold text-white py-8 px-7 tracking-wider hover:neon-text-pink"
-            :class="{ 'neon-gradient-border': route.path === '/mini' }">
+            :class="{ 'neon-gradient-border': route.path === '/minigame' }">
             Minigame
           </RouterLink>
         </div>

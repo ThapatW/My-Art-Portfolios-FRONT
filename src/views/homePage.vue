@@ -10,7 +10,7 @@ const route = useRoute()
         class="hidden md:flex absolute bottom-0 right-0 w-[30vw] z-[-1]">
     <div class="flex flex-col items-center justify-center min-h-full text-center gap-4">
         <h1 class="text-5xl font-bold text-white neon-text-pink mb-6 leading-[1.25]">H<span class="neon-text-blue">in</span>oshii's
-            Gallery</h1>
+            Sandbox !</h1>
         <p class="text-xl text-gray-300 tracking-widest">Digital Artist · Minecraft / Roblox</p>
         <p class="text-gray-400 max-w-md">I draw :DD (also open for commissions!)</p>
     </div>
@@ -23,11 +23,11 @@ const route = useRoute()
                 </button>
             </div>
         </RouterLink>
-        <RouterLink to="/gallery">
+        <RouterLink to="/minigame">
             <div class="flex flex-col w-full lg:w-[20vw] lg:h-[20vh] justify-center items-center">
-                <img src="@/assets/pics/galleryemote.png" alt="Gallery Preview" class="hidden md:flex h-[10vw] z-2">
+                <img src="@/assets/pics/minigameemote.png" alt="Minigame Preview" class="hidden md:flex h-[10vw] z-2">
                 <button class="neon-btn-blue w-full">
-                    View Gallery
+                    Play minigame?
                 </button>
             </div>
         </RouterLink>
