@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
+import { ref } from 'vue'
 const route = useRoute()
+const menuOpen = ref(false)
 const bgImage = new URL('@/assets/pics/background.jpg', import.meta.url).href
 </script>
 
@@ -15,6 +17,7 @@ const bgImage = new URL('@/assets/pics/background.jpg', import.meta.url).href
           </RouterLink>
         </div>
 
+        <!-- Desktop nav -->
         <div class="hidden md:flex">
           <RouterLink to="/commission"
             class="flex items-center text-lg font-semibold text-white py-8 px-7 tracking-wider hover:neon-text-pink"
@@ -27,16 +30,30 @@ const bgImage = new URL('@/assets/pics/background.jpg', import.meta.url).href
             Minigame
           </RouterLink>
         </div>
-        <div class="flex md:hidden">
+
+        <!-- Hamburger mobile -->
+        <button class="flex md:hidden text-white text-2xl px-4 py-3" @click="menuOpen = !menuOpen">
+          ☰
+        </button>
+
+        <!-- Hamburger dropdown -->
+        <div v-if="menuOpen"
+          class="absolute top-full left-0 w-full bg-black/80 backdrop-blur-md flex flex-col md:hidden">
           <RouterLink to="/commission"
-            class="flex items-center text-lg font-semibold text-white py-4 px-7 tracking-wider hover:neon-text-pink"
-            :class="{ 'neon-gradient-border': route.path === '/commission' }">
-            =
+            class="text-lg font-semibold text-white py-4 px-7 tracking-wider hover:neon-text-pink border-b border-white/10"
+            :class="{ 'neon-text-pink': route.path === '/commission' }" @click="menuOpen = false">
+            Commission
+          </RouterLink>
+          <RouterLink to="/minigame"
+            class="text-lg font-semibold text-white py-4 px-7 tracking-wider hover:neon-text-pink"
+            :class="{ 'neon-text-pink': route.path === '/minigame' }" @click="menuOpen = false">
+            Minigame
           </RouterLink>
         </div>
+
       </nav>
     </div>
-    <div class="min-h-[calc(100vh-60px)] md:min-h-[calc(100vh-92px)] bg-black/50 backdrop-blur-md">
+    <div class="min-h-[calc(100vh-56px)] md:min-h-[calc(100vh-92px)] bg-black/50 backdrop-blur-md">
       <div class="md:px-[10vw] md:py-[7vh]">
         <RouterView />
       </div>
