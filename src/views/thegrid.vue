@@ -1,21 +1,25 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { io } from 'socket.io-client'
 
-interface Action {
-    label: string
-    fn: () => void
-    danger?: boolean
-}
+const socket = io('http://localhost:3000')
 
-const count = ref<number>(5000)
-const cells = ref<boolean[]>(Array(count.value).fill(false))
+const cells = ref<boolean[]>(Array(5000).fill(false))
 
 const activeCount = computed<number>(() => cells.value.filter(Boolean).length)
 
-function toggle(i: number): void {
-    cells.value[i] = !cells.value[i]
-}
+socket.on('init', (state: boolean[]) => {
+  cells.value = state
+})
 
+socket.on('toggle', ({ i, value }: { i: number, value: boolean }) => {
+  cells.value[i] = value
+})
+
+function toggle(i: number): void {
+  cells.value[i] = !cells.value[i]
+  socket.emit('toggle', i)
+}
 </script>
 
 <template>
