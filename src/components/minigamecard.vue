@@ -25,11 +25,11 @@ const router = useRouter()
     <div v-else class="absolute inset-0 bg-gray-800" />
 
     <!-- Overlay -->
-    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300" />
+    <div class="absolute inset-0 bg-black/70 group-hover:bg-black/40 transition-all duration-500" />
 
     <!-- Title -->
     <div class="absolute inset-0 flex items-center justify-center">
-      <h2 class="text-white text-2xl font-bold tracking-wider neon-text-pink">{{ title }}</h2>
+      <h2 class="text-white text-4xl font-bold tracking-wider neon-text-pink">{{ title }}</h2>
     </div>
   </div>
 </template>

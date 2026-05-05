@@ -23,6 +23,17 @@ html {
   box-shadow: -60px 0 120px #ff00de, 60px 0 120px #00deff;
 }
 
+@utility neon-chrome-boxshadow-lighter {
+  box-shadow: -20px 0 40px #ff00de, 20px 0 40px #00deff;
+}
+
+@utility border-neon {
+  border-radius: 0.75rem;
+  border: 3px solid transparent;
+  background: linear-gradient(to right, #180404, #010520) padding-box,
+              linear-gradient(to right, #ff00de, #00deff) border-box;
+}
+
 .neon-gradient-border {
   position: relative;
 }
@@ -42,14 +53,12 @@ html {
 
 .neon-btn-pink {
   position: relative;
-  font-size: 20px; 
-  border: 3px solid #ffffff;
+  font-size: 20px;
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 0.75rem;
   letter-spacing: 0.1em;
   transition: all 0.3s ease;
-  border: none;
   background: linear-gradient(to right, #180404, #010520) padding-box,
               linear-gradient(to right, #ff00de, #00deff) border-box;
   border: 3px solid transparent;
@@ -63,13 +72,11 @@ html {
 .neon-btn-blue {
   position: relative;
   font-size: 20px;
-  border: 3px solid #ffffff;
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 0.75rem;
   letter-spacing: 0.1em;
   transition: all 0.3s ease;
-  border: none;
   background: linear-gradient(to right, #180404, #010520) padding-box,
               linear-gradient(to right, #ff00de, #00deff) border-box;
   border: 3px solid transparent;

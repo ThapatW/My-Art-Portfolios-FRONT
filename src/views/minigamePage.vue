@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import MinigameCard from '@/components/minigamecard.vue'
 
-const game1Img = new URL('@/assets/pics/mascot.png', import.meta.url).href
+const game1Img = new URL('@/assets/pics/simonsays.png', import.meta.url).href
 const game2Img = new URL('@/assets/pics/mascot.png', import.meta.url).href
 </script>
 
@@ -18,16 +18,6 @@ const game2Img = new URL('@/assets/pics/mascot.png', import.meta.url).href
     />
     <MinigameCard
       title="Game 2"
-      links="/minigame/game2"
-      :imgSrc="game2Img"
-    />
-    <MinigameCard
-      title="Game 3"
-      links="/minigame/game1"
-      :imgSrc="game1Img"
-    />
-    <MinigameCard
-      title="Game 4"
       links="/minigame/game2"
       :imgSrc="game2Img"
     />

@@ -10,7 +10,7 @@ const router = createRouter({
     { path: '/', component: HomePage },
     { path: '/commission', component: CommissionPage },
     { path: '/minigame', component: MinigamePage },
-    { path: '/minigame/simonsay', component: Simonsay , meta: { hideNavbar: true }  },
+    { path: '/minigame/simonsay', component: Simonsay  },
   ]
 })
 
