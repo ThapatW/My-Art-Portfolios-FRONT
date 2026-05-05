@@ -2,7 +2,7 @@
 import MinigameCard from '@/components/minigamecard.vue'
 
 const game1Img = new URL('@/assets/pics/simonsays.png', import.meta.url).href
-const game2Img = new URL('@/assets/pics/mascot.png', import.meta.url).href
+const game2Img = new URL('@/assets/pics/grid.png', import.meta.url).href
 </script>
 
 <template>
@@ -17,8 +17,8 @@ const game2Img = new URL('@/assets/pics/mascot.png', import.meta.url).href
       :imgSrc="game1Img"
     />
     <MinigameCard
-      title="Game 2"
-      links="/minigame/game2"
+      title="The Grid"
+      links="/minigame/thegrid"
       :imgSrc="game2Img"
     />
   </div>
